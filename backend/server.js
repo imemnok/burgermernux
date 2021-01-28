@@ -15,15 +15,12 @@ import {
   PORT, NODE_ENV, MONGO_URI, SESS_NAME, SESS_SECRET, SESS_LIFETIME
 } from "./config/config";
 const MongoStore = connectStore(session);
-// const PORT = 4001;
-// const uri =
-//   "mongodb+srv://bgdbAdmin:l2XuYqeNZjBjlsMEGt3o@burger-clu0.ghcup.mongodb.net/burger?retryWrites=true&w=majority";
-
-// console.log("session: " + SESS_SECRET)
 
 mongoose.connect(MONGO_URI, { useNewUrlParser: true });
 const connection = mongoose.connection;
+    app.set('port', process.env.PORT || PORT)
     app.use('/images', express.static('Images'))
+    app.use(express.static('../build'));
     app.use(bodyParser.urlencoded({ extended: true }));
     app.use(bodyParser.json());
     app.use(cors());
@@ -51,7 +48,11 @@ app.use("/menu", menuRoutes)
 app.use("/orders", ordersRoutes)
 app.use("/session", sessionRoutes)
 app.use("/cart", cartRoutes)
-app.listen(PORT, function () {
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "build",     
+  "index.html"));
+});
+app.listen(app.get('port'), function () {
     console.log("Server is running on Port: " + PORT);
   });
 

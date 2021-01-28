@@ -48,11 +48,11 @@ function App({userId, userName, userRole, logout }) {
                     Menu
                   </Link>
                 </li>
-                 <li className="navbar-item" key="order">
+                 {/* <li className="navbar-item" key="order">
                   <Link to="/order" className="nav-link">
                     Order
                   </Link>
-                </li>
+                </li> */}
                 <li className="navbar-item" key="cart">
                   <Link to="/cart" className="nav-link">
                     Cart
@@ -94,7 +94,7 @@ function App({userId, userName, userRole, logout }) {
 
         <Route path="/" exact component={Home} />
         <Route path="/menu" component={Menu} />
-        <ProtectedRoute path="/order" component={Order} />
+        {/* <ProtectedRoute path="/order" component={Order} /> */}
         <Route path="/cart" component={Cart} />
         <ProtectedRoute path="/add" component={Add} />
         <AuthRoute path="/register" component={Register} />
