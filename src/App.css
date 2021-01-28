@@ -1,10 +1,45 @@
 .App {
   text-align: center;
 }
+#root {
+  background-color: rgb(251, 190, 54) !important;
+  z-index: 0;
+}
+.container {
+  /* position: relative; */
+  background-color: rgb(251, 190, 54) !important;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 0;
+}
+.more-body {
+  position: absolute;
+  left: 0; right: 0;  
+  background: white;
+  padding: 3px 8px;
+  z-index: 1;
+}
 
+header {
+  padding-top: 1em;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.navbar {
+  background-color: rgb(207, 150, 25) !important;
+  border-radius: 30px 30px 30px 30px !important;
+}
+.item-div {
+  border: 1px solid #9a382d;
+  background-color: rgb(207, 150, 25) !important;
+  border-radius: 30px 30px 30px 30px !important;
+
+}
+
+.navbar-collapse {
+  padding-left: 25% !important;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -32,7 +67,212 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+.carousel-inner {
+  background-color: rgb(251, 190, 54) !important;
+  height: 300px;
+  width: 100%;
+}
+
+.transition-slide {
+  background-color: rgb(252, 203, 94);
+  height: 300px;
+  width: 100%;
+}
+
+.carousel-caption {
+  position: relative;
+  left: 0;
+  top: 0;
+  color: black !important
+}
+
+
+
+@keyframes example {}
+
+@keyframes mymove {
+  from {
+    bottom: 300px;
+  }
+
+  to {
+    bottom: 0px;
+  }
+}
+
+/* .first-slide p {
+  position: relative;
+  animation-name: mymove;
+  animation-duration: 4s;
+} */
+
+
+p {
+  position: relative;
+  top: 50%;
+  width: 24em;
+  margin: 0 auto;
+  /* border-right: 2px solid rgba(255, 255, 255, .75); */
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-50%);
+}
+
+/* Animation */
+p {
+  animation: animated-text 2s steps(30, end) 1s 1 normal both
+}
+
+@keyframes animated-text {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+/* @keyframes blinkTextCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, .75);
+  }
+
+  to {
+    border-right-color: transparent;
+  }
+} */
+
+.navigate-div {
+  text-align: center;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 0 5px 40px 5px;
+}
+
+.line-text {
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+/* .line-text span { 
+   background:#fff; 
+   padding:0 10px; 
+} */
+
+span {
+  color: #FFFFFF;
+}
+
+/* .row {
+  border: 1px solid;
+}
+
+.col {
+  border: 1px solid;
+} */
+
+.bumper {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 600;
+  color: #9a382d;
+}
+
+.bumper span span {
+  position: relative;
+  animation: move-text-color 0.75s forwards;
+  bottom: -1em;
+  opacity: 0;
+}
+
+.featured {
+  font-family: "Barlow";
+  font-size: 1.5em;
+  text-align: left;
+  font-weight: 600;
+  color: #ec230d;
+  position: relative;
+  width: 100%;
+  line-height: 0.1em;
+  margin: 10px 0 20px;
+}
+
+.featured:after {
+  z-index: 0;
+  position: absolute;
+  /* Change "right: 0" to "left: 0" for left side line */
+  right: 30%;
+  content: '';
+  width: 20%;
+  border: 2px solid #ec230d;
+  border-radius: 12px;
+}
+.featured .right {
+  /* background-color: #fff; */
+  padding: 0 10px
+}
+
+.line {
+  display: inline-block;
+  width: 100px;
+  height: 3px;
+  background-color: red;
+  /* text-align: center; */
+}
+
+.featured span span {
+  position: relative;
+  animation: move-text 0.5s forwards;
+  bottom: -1em;
+  opacity: 0;
+}
+
+@keyframes move-text-color {
+  0% {
+    bottom: -0.2em;
+    opacity: 1;
+    color: #9a382d;
+  }
+
+  50% {
+    bottom: 0.2em;
+    color: #9a382d;
+  }
+
+  100% {
+    bottom: 0;
+    opacity: 1;
+    color: #9a382d;
+  }
+}
+
+@keyframes move-text {
+  0% {
+    top: -0.2em;
+    opacity: 1;
+    color: #ec230d;
+  }
+
+  50% {
+    top: 0.2em;
+    color: #ec230d;
+  }
+
+  100% {
+    top: 0;
+    opacity: 1;
+    color: #ec230d;
   }
 }

@@ -1,0 +1,61 @@
+.card {
+    overflow: hidden;
+    width: 14rem;
+    background-color: #faf6e6;
+    transition: all 0.3s ease 0s;
+    height: 30rem;
+}
+
+.order-col {
+    padding-top: 1rem;
+    padding-left: 0rem;
+}
+
+.card-body {
+    word-wrap: break-word;
+}
+.card-text {
+    word-wrap: break-word !important;
+
+}
+
+.card:hover {
+    background-color:  #C82922;
+    transform: scale(1.05);
+}
+
+.order-button {
+    text-align: center;
+}
+
+.card-img {
+    padding-top: 1rem;
+}
+
+.center-button {
+    transition: all 0.3s ease 0s;
+    background-color: #7da352;
+}
+.center-button:hover {
+    background-color: #52a363;
+    /* color: black; */
+    transform: scale(1.05);
+}
+
+.menu-body {
+    background-color: #faf6e6 !important;
+}
+.menu-container {
+    background-color: #faf6e6 !important;
+}
+
+.alignLeft {
+    float: left
+}
+.alignRight {
+    float: right
+}
+
+.clear {
+    clear: both;
+}

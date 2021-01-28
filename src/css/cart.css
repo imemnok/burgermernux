@@ -1,0 +1,30 @@
+.cart-card {
+    overflow: hidden;
+    width: 36rem;
+    background-color: #faf6e6;
+    /* transition: all 0.3s ease 0s;
+    height: 30rem; */
+}
+
+.cart-body {
+    position: absolute;
+    left: 0; right: 0;  
+    /* background: white; */
+    padding: 3px 8px;
+    z-index: 1;
+    background-color: #faf6e6 !important;
+}
+
+.cart-container {
+    background-color: #faf6e6 !important;
+    top: 0; left: 0; bottom: 0; right: 0;
+    z-index: 0;
+}
+
+.cart-card-order {
+    overflow: hidden;
+    width: 14rem;
+    background-color: #faf6e6;
+    /* transition: all 0.3s ease 0s;
+    height: 30rem; */
+}
