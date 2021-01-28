@@ -112,7 +112,7 @@ useEffect (()=> {
                 )
             )}
           </Row>
-          <Button onClick={() => deactivateCart()}>Deactivate</Button>
+          {/* <Button onClick={() => deactivateCart()}>Deactivate</Button> */}
         </Container>
       </div>
     </>
