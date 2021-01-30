@@ -1,5 +1,5 @@
 
-const baseUri = "http://localhost:4001/"
+const baseUri = ""
 export const postFetch = (path,object) => {
     console.log(path)
     console.log(object)

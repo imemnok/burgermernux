@@ -16,7 +16,7 @@ import { updateCart } from "../actions/cart";
 import { getAllMenuItems } from "../actions/menu"
 import { getMenuItem } from "../util/menu";
 
-const imgSrc = "http://localhost:4001/images/";
+const imgSrc = "http://localhost:5000/images/";
 
 const mapStateToProps = ({
   session: { userId, userName, userRole },
